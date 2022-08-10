@@ -2033,11 +2033,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Code\\vicenzo\\Modulo2-Semana11\\ProjetoSemana11\\ProjetoSemana11.Api\\ProjetoSemana11.Api.csproj",
+      "projectUniqueName": "C:\\Code\\vicenzo\\Modulo2-Semana11\\ProjetoSemana11\\ProjetoSemana11.Api\\ProjetoSemana11.Api.csproj",
       "projectName": "ProjetoSemana11.Api",
-      "projectPath": "c:\\Code\\vicenzo\\Modulo2-Semana11\\ProjetoSemana11\\ProjetoSemana11.Api\\ProjetoSemana11.Api.csproj",
+      "projectPath": "C:\\Code\\vicenzo\\Modulo2-Semana11\\ProjetoSemana11\\ProjetoSemana11.Api\\ProjetoSemana11.Api.csproj",
       "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "c:\\Code\\vicenzo\\Modulo2-Semana11\\ProjetoSemana11\\ProjetoSemana11.Api\\obj\\",
+      "outputPath": "C:\\Code\\vicenzo\\Modulo2-Semana11\\ProjetoSemana11\\ProjetoSemana11.Api\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -2050,6 +2050,7 @@
         "net6.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {

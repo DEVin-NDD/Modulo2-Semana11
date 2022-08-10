@@ -101,6 +101,20 @@ public class ProjetoDbContext : DbContext
             .IsRequired()
             .HasDefaultValue(1);
 
+        modelBuilder.Entity<Vacina>()
+            .HasData(new []{
+                new Vacina(){
+                    Id = 1,
+                    Nome = "Gripe",
+                    NumeroDoses = 1
+                },
+                new Vacina(){
+                    Id = 2,
+                    Nome = "Tétano",
+                    NumeroDoses = 1
+                }
+            });
+
         // Clientes Vacinas
         modelBuilder.Entity<ClienteVacina>()
             .ToTable("ClientesVacinas");
