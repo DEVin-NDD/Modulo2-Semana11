@@ -6,5 +6,5 @@ public class CarteiraTrabalho
     public string PisPasep { get; set; }
 
     public int ClienteId { get; set; }
-    public Cliente Cliente { get; set; }
+    public Cliente Cliente { internal get; set; }
 }

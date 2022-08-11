@@ -50,11 +50,7 @@ public class VacinasController : ControllerBase
     ){
         _context.Vacinas.Add(body);
 
-        var operacoesRealizadas = _context.SaveChanges();
-
-        if(operacoesRealizadas == 0){
-            return new StatusCodeResult(500);
-        }
+        _context.SaveChanges();
 
         return Created("api/vacinas", body);
     }
@@ -84,10 +80,7 @@ public class VacinasController : ControllerBase
 
         _context.Vacinas.Remove(vacina);
 
-        var operacoesRealizadas = _context.SaveChanges();
-        if(operacoesRealizadas == 0){
-            return new StatusCodeResult(500);
-        }
+        _context.SaveChanges();
 
         return NoContent();
     }
