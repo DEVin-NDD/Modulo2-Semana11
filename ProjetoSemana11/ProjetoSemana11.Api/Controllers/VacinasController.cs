@@ -38,4 +38,57 @@ public class VacinasController : ControllerBase
             .ToList()
         );
     }
+
+    [HttpGet("{id}")]
+    public ActionResult<Vacina> GetById([FromRoute] int id){
+        return Ok(_context.Vacinas.Find(id));
+    }
+
+    [HttpPost]
+    public ActionResult<Vacina> Post(
+        [FromBody] Vacina body
+    ){
+        _context.Vacinas.Add(body);
+
+        var operacoesRealizadas = _context.SaveChanges();
+
+        if(operacoesRealizadas == 0){
+            return new StatusCodeResult(500);
+        }
+
+        return Created("api/vacinas", body);
+    }
+
+    [HttpPut("{id}")]
+    public ActionResult<Vacina> Put(
+        [FromBody] Vacina body,
+        [FromRoute] int id
+    ){
+        var vacina = _context.Vacinas.Find(id);
+
+        if(vacina == null) return NotFound();
+
+        vacina.Nome = body.Nome;
+        vacina.NumeroDoses = body.NumeroDoses;
+
+        _context.SaveChanges();
+
+        return Ok(vacina);
+    }
+
+    [HttpDelete("{id}")]
+    public ActionResult Delete([FromRoute] int id){
+        var vacina = _context.Vacinas.Find(id);
+
+        if(vacina == null) return NotFound();
+
+        _context.Vacinas.Remove(vacina);
+
+        var operacoesRealizadas = _context.SaveChanges();
+        if(operacoesRealizadas == 0){
+            return new StatusCodeResult(500);
+        }
+
+        return NoContent();
+    }
 }
